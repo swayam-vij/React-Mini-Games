@@ -1,9 +1,8 @@
-import React from 'react'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import TicTacToe from './Games/TicTacToe/TicTacToe'
-import Wordle from './Games/Wordle'
-import MemoryGame from './Games/MemoryGame'
-import TwoZeroFourEight from './Games/TwoZeroFourEight'
+import Wordle from './Games/Wordle/Wordle'
+import MemoryGame from './Games/MemoryGame/MemoryGame'
+import TwoZeroFourEight from './Games/2048/TwoZeroFourEight'
 import Home from "./Pages/Home"
 const App = () => {
   return (

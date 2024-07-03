@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Wordle = () => {
   return (
-    <div>Wordle</div>
+    <div></div>
   )
 }
 
