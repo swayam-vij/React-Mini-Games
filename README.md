@@ -4,7 +4,7 @@ A Vite+React Mini Games Project that allows user to play Various Games.
 
 ## Games Added
 
-[X] Tic Tac Toe\
+[✔] Tic Tac Toe\
 [] Wordle\
 [] Memory Game\
 [] 2048\
