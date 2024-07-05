@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import Board from './Board';
 import Keyboard from './Keyboard';
@@ -41,7 +40,7 @@ const Wordle: React.FC = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-4xl font-bold mb-8">Wordle Clone</h1>
       <Board targetWord={targetWord} guesses={guesses} currentGuess={currentGuess} />
-      <Keyboard onKeyPress={handleKeyPress} />
+      <Keyboard onKeyPress={(key) => handleKeyPress(new KeyboardEvent('keydown', { key }))} />
     </div>
   );
 };

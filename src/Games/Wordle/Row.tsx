@@ -4,11 +4,10 @@ import Cell from './Cell';
 interface RowProps {
   guess: string;
   targetWord: string;
+  isSubmitted: boolean;
 }
 
-const Row: React.FC<RowProps> = ({ guess, targetWord }) => {
-  const isSubmitted = guess.length === 5;
-
+const Row: React.FC<RowProps> = ({ guess, targetWord, isSubmitted }) => {
   const cells = Array.from({ length: 5 }, (_, i) => {
     const char = guess[i] || '';
     let status = '';

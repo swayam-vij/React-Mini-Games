@@ -13,7 +13,12 @@ const Board: React.FC<BoardProps> = ({ targetWord, guesses, currentGuess }) => {
   return (
     <div className="grid grid-rows-6 gap-2 mb-8">
       {rows.map((guess, index) => (
-        <Row key={index} guess={guess} targetWord={targetWord} />
+        <Row
+          key={index}
+          guess={guess}
+          targetWord={targetWord}
+          isSubmitted={index < guesses.length}
+        />
       ))}
     </div>
   );

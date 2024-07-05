@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface KeyboardProps {
-  onKeyPress(): (key: string) => void;
+  onKeyPress: (key: string) => void;
 }
 
 const Keyboard: React.FC<KeyboardProps> = ({ onKeyPress }) => {
