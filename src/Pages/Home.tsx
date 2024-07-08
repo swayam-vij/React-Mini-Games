@@ -5,8 +5,8 @@ const Home = () => {
     <div className='flex flex-col'>
       <Link to="/tictactoe">Tic Tac Toe</Link>
       <Link to="/wordle">Wordle</Link>
-      <Link to="/memoryGame">tictactoe</Link>
-      <Link to="/2048">tictactoe</Link>
+      <Link to="/memoryGame">Memory Game</Link>
+      <Link to="/2048">2048</Link>
     </div>
   )
 }
