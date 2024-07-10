@@ -1,17 +1,34 @@
+
 # Mini Games
 
-A Vite+React Mini Games Project that allows user to play Various Games.
+A Vite+React Mini Games Project that allows user to play Various Games that i built to learn and get used to TypeScript.
 
-## Games Added
+Look at the [DEMO](https://react-mini-games-mu.vercel.app/)
 
-[✔] Tic Tac Toe\
-[] Wordle\
-[] Memory Game\
-[] 2048\
-[] Sliding Puzzle
+## 💡 TO-DO
+
+* [X]  Tic Tac Toe
+* [X]  Wordle
+* [X]  Memory Game
+* []  Make site responsive
+* []  2048  
 
 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://i.ibb.co/BCw58vC/minigamelandingpage.jpg)
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm i
+```
+
+```bash
+  npm run dev
+```
+
