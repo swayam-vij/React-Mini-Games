@@ -17,7 +17,7 @@ const Board = () => {
       >
         New Game
       </button>
-      <div className="text-lg text-purple-200">Turns: {turns}</div>
+      <div className="text-lg font-semibold text-purple-900">Turns: {turns}</div>
       </div>
   );
 };

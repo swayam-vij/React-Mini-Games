@@ -9,7 +9,7 @@ interface CardProps {
 const Card = ({ select, status, img }: CardProps) => {
   return (
     <div
-      className={`w-32 h-36 flex justify-center items-center cursor-pointer ${
+      className={`w-20 h-28 flex justify-center items-center cursor-pointer ${
         status === "facedown" ? "bg-gray-300" : "bg-white"
       } border ${status === "matched" ? "border-green-500" : "border-gray-500"} transition-transform transform ${
         status === "matched" ? "animate-pulse" : "animate-flipInY"

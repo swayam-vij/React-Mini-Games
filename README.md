@@ -10,8 +10,8 @@ Look at the [DEMO](https://react-mini-games-mu.vercel.app/)
 * [X]  Tic Tac Toe
 * [X]  Wordle
 * [X]  Memory Game
-* []  Make site responsive
-* []  2048  
+* [X]  Make site responsive
+- [ ]  2048  
 
 
 

@@ -109,12 +109,12 @@ function TicTacToe() {
   };
 
   return (
-    <div className="h-full p-8 text-slate-800 bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 p-8">
       <h1 className="text-center text-5xl mb-4 font-display text-white">
         Tic Tac Toe
       </h1>
       <div>
-        <div className="grid grid-cols-3 gap-3 mx-auto w-96">
+        <div className="grid grid-cols-3 gap-3 lg:w-96 md:w-96 md:mx-auto lg:mx-auto">
           {gameState.map((player, index) => (
             <Square
               key={index}
@@ -124,7 +124,7 @@ function TicTacToe() {
           ))}
         </div>
 
-        <div className="mx-auto w-96 text-2xl text-serif">
+        <div className="text-2xl text-serif lg:w-96 lg:mx-auto">
           <p className="text-white mt-5">
             Next Player: <span>{currentPlayer}</span>
           </p>

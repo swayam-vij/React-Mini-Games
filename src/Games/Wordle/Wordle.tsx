@@ -3,6 +3,7 @@ import Board from './Board';
 import Keyboard from './Keyboard';
 import wordsData from '../../assets/Wordle-assets/words.json';
 import { useNavigate } from 'react-router-dom';
+
 const Wordle: React.FC = () => {
   const [wordList, setWordList] = useState<string[]>([]);
   const [targetWord, setTargetWord] = useState<string>('');
@@ -13,7 +14,9 @@ const Wordle: React.FC = () => {
     setWordList(wordsData.words);
     setTargetWord(wordsData.words[Math.floor(Math.random() * wordsData.words.length)]);
   }, []);
+
   const navigate = useNavigate();
+
   const handleKeyPress = useCallback(
     (event: KeyboardEvent) => {
       const { key } = event;
@@ -26,12 +29,11 @@ const Wordle: React.FC = () => {
         setGuesses((prev) => {
           const newGuesses = [...prev, currentGuess];
           if (newGuesses.length === 5 && currentGuess !== targetWord) {
-            alert(`the word was ${targetWord}`);
-            navigate("/")
-          }
-          else if(newGuesses.length === 5 && currentGuess === targetWord){
-            alert(`you won`)
-            navigate("/")
+            alert(`The word was ${targetWord}`);
+            navigate("/");
+          } else if (newGuesses.length === 5 && currentGuess === targetWord) {
+            alert(`You won!`);
+            navigate("/");
           }
           return newGuesses;
         });
@@ -42,7 +44,7 @@ const Wordle: React.FC = () => {
         setCurrentGuess((prev) => prev + key.toLowerCase());
       }
     },
-    [currentGuess, targetWord, wordList]
+    [currentGuess, targetWord, wordList, navigate]
   );
 
   useEffect(() => {
@@ -53,8 +55,8 @@ const Wordle: React.FC = () => {
   }, [handleKeyPress]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-stone-900">
-      <h1 className="text-4xl font-bold mb-8 text-white">Wordle</h1>
+    <div className="absolute flex flex-col items-center justify-center min-h-screen bg-neutral-950 p-4 lg:w-full">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold m-4 sm:m-6 lg:m-8 text-white">Wordle</h1>
       <Board targetWord={targetWord} guesses={guesses} currentGuess={currentGuess} />
       <Keyboard onKeyPress={(key) => handleKeyPress(new KeyboardEvent('keydown', { key }))} />
     </div>
