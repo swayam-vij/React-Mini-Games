@@ -26,7 +26,7 @@ const Row: React.FC<RowProps> = ({ guess, targetWord, isSubmitted }) => {
   });
 
   return (
-    <div className="grid grid-cols-5 gap-1">
+    <div className="grid grid-cols-5 gap-3">
       {cells.map((cell, index) => (
         <Cell key={index} char={cell.char} status={cell.status} />
       ))}

@@ -55,10 +55,11 @@ const Wordle: React.FC = () => {
   }, [handleKeyPress]);
 
   return (
-    <div className="absolute flex flex-col items-center justify-center min-h-screen bg-neutral-950 p-4 lg:w-full">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold m-4 sm:m-6 lg:m-8 text-white">Wordle</h1>
+    <div className="absolute flex flex-col items-center justify-center space-y-32 min-h-full lg:space-y-2 bg-neutral-950 lg:w-full">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white pt-6">Wordle</h1>
       <Board targetWord={targetWord} guesses={guesses} currentGuess={currentGuess} />
       <Keyboard onKeyPress={(key) => handleKeyPress(new KeyboardEvent('keydown', { key }))} />
+      <div className=""></div>
     </div>
   );
 };

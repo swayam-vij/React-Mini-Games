@@ -109,7 +109,7 @@ function TicTacToe() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 p-8">
+    <div className="w-full min-h-svh space-y-10 bg-gradient-to-r from-cyan-500 to-blue-500 p-8">
       <h1 className="text-center text-5xl mb-4 font-display text-white">
         Tic Tac Toe
       </h1>
