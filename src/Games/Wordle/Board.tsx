@@ -11,7 +11,7 @@ const Board: React.FC<BoardProps> = ({ targetWord, guesses, currentGuess }) => {
   const rows = [...guesses, currentGuess, ...Array(5 - guesses.length - 1).fill('')];
 
   return (
-    <div className="w-3/4 h-4/5 grid grid-rows-6 gap-2 mb-8">
+    <div className="w-3/4 h-4/5 grid grid-rows-6 gap-2 mb-8 lg:w-96">
       {rows.map((guess, index) => (
         <Row
           key={index}
